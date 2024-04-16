@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn TLDR",
+  "version": "1.0.0",
+  "description": "LinkedIn feed without the BS",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "128": "public/icon128.png"
+  },
+  "action": {
+    "default_title": "Popup",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["content-script/src/main.tsx"],
+      "media": []
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+@import '@radix-ui/colors/gray.css';
+@import '@radix-ui/colors/blue.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/red.css';
+@import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/blue-dark.css';
+@import '@radix-ui/colors/green-dark.css';
+@import '@radix-ui/colors/red-dark.css';
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+.summarize-component-container {
+  animation: fadeIn 1s ease-out forwards;
+  /* Ensure the element starts out invisible */
+  opacity: 0;
+}
+
+.dark-theme {
+  .summarize-flex {
+    color: #0c3b8a;
+    display: flex;
+    align-items: center;
+    margin: 1.5px;
+  }
+
+  p, b {
+    text-align: left;
+    color: #ffffff;
+    margin: 0; /* Remove margin */
+  }
+
+  .radix-themes {
+    text-align: center;
+    /* background-color: var(--blue-5); /* Assuming you want the same background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Omitting font-size and color to not affect nested button text */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #353b42;
+  }
+
+  .App {
+    text-align: center;
+    background-color: #353b42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Setting a fixed font size */
+    color: white;
+    margin-top: 8px; /* Fixed margin */
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px; /* Fixed padding */
+    border-radius: 12px;
+    overflow: hidden;
+    width: 515px; /* Fixed width */
+    height: 74px; /* Fixed height */
+    opacity: 0.9;
+  }
+
+  .ToggleGroupItem {
+    background-color: #353b42;
+    color: var(--mauve-11);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    font-size: 15px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+  }
+
+}
+
+.light-theme {
+  .radix-themes {
+    text-align: center;
+    /* background-color: var(--blue-5); /* Assuming you want the same background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Omitting font-size and color to not affect nested button text */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #E4ECF5;
+  }
+
+  .App {
+    text-align: center;
+    background-color: #E4ECF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Setting a fixed font size */
+    color: white;
+    margin-top: 8px; /* Fixed margin */
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px; /* Fixed padding */
+    border-radius: 12px;
+    overflow: hidden;
+    width: 515px; /* Fixed width */
+    height: 74px; /* Fixed height */
+    opacity: 0.9;
+  }
+
+  .ToggleGroupItem {
+    background-color: #E4ECF5;
+    color: var(--mauve-11);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    font-size: 15px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+  }
+  .summarize-flex {
+    color: #0d4cb9;
+    display: flex;
+    align-items: center;
+    margin: 1.5px;
+  }
+
+  p, b {
+  text-align: left;
+  color: #000000;
+  margin: 0; /* Remove margin */
+}
+
+}
+
+b {
+  font-size: 20px; /* Fixed font size */
+}
+
+p {
+  font-size: 17px; /* Fixed font size */
+}
+
+
+.App-logo {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  pointer-events: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.app-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width */
+  height: 74px;
+}
+
+.text-wrap {
+  flex: 1;
+  padding: 0 10px; /* Fixed padding */
+}
+
+.button-wrap {
+  margin-left: 15px; /* Fixed margin */
+  margin-right: 12px; /* Fixed margin */
+}
+
+.save-api {
+  color: #0d4cb9;
+  margin: 1.5px;
+  align-items: left;
+  display: flex;
+}
+
+
+
+
+
+
+/* reset */
+button {
+  all: unset;
+}
+
+.ToggleGroup {
+  display: inline-flex;
+  background-color: var(--mauve-6);
+  border-radius: 4px;
+  border-color:#0d4cb9;
+  box-shadow: 0 2px 5px var(--black-a7);
+}
+
+
+.ToggleGroupItem:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.ToggleGroupItem:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.ToggleGroupItem:hover {
+  background-color: var(--blue-5);
+}
+/* .ToggleGroupItem[data-state='on'] {
+  background-color: var(--blue-5);
+  color: var(--blue-11);
+} */
+.ToggleGroupItem:focus {
+  position: relative;
+}
