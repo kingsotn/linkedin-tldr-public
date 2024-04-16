@@ -159,18 +159,6 @@ const SummarizeComponent = ({ emberNum, postContentDom, postContent, apiKeySet, 
     // setApiKeySet.current = true;
   }
 
-  // const saveApiKey = (key: string) => {
-  //   chrome.storage.local.set({ apiKey: key }, () => {
-  //     console.log('API Key is saved');
-  //     setApiKeySet.current = true;
-  //   });
-  // };
-
-  // const handleApiKeySubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   saveApiKey(apiKey);
-  // };
-
 
   useEffect(() => {
     console.log(`isLoading updated: ${isLoading}`);
@@ -186,32 +174,19 @@ const SummarizeComponent = ({ emberNum, postContentDom, postContent, apiKeySet, 
     <div className={isDarkMode() ? 'dark-theme' : 'light-theme'}>
       <div className="App">
         <div className="app-wrap">
-          {/* {!apiKeySet ? (
-            <form onSubmit={handleApiKeySubmit}>
-              <input
-                type="text"
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
-                placeholder="Enter your OpenAI API Key"
-              />
-              <button className="save-api" type="submit">Save API Key</button>
-            </form>
-          ) : ( */}
-          <>
-            <div className="text-wrap">
-              <div className="summarize-flex">
-                {showSummarize ? <b>🥱 This post looks pretty long ({wordCount} words)</b> : <b>🎉 Summary complete!</b>}
-              </div>
-              {showSummarize ? <p>Want to summarize it with AI?</p> : <p>Rate or redo your summary if needed.</p>}
+          <div className="text-wrap">
+            <div className="summarize-flex">
+              {showSummarize ? <b>🥱 This post looks pretty long ({wordCount} words)</b> : <b>🎉 Summary complete!</b>}
             </div>
-            <div className="button-wrap">
-              {showSummarize ? (
-                <SummarizeButton emberNum={emberNum} postContentDom={postContentDom} onSummarizeClick={onSummarizeClick} isLoading={isLoading} />
-              ) : (
-                <ToggleGroupButton onReloadClick={handleSummarizeClick} />
-              )}
-            </div>
-          </>
+            {showSummarize ? <p>Want to summarize it with AI?</p> : <p>Rate or redo your summary if needed.</p>}
+          </div>
+          <div className="button-wrap">
+            {showSummarize ? (
+              <SummarizeButton emberNum={emberNum} postContentDom={postContentDom} onSummarizeClick={onSummarizeClick} isLoading={isLoading} />
+            ) : (
+              <ToggleGroupButton onReloadClick={handleSummarizeClick} />
+            )}
+          </div>
           {/* )} */}
         </div>
       </div>
